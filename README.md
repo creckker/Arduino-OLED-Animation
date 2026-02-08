@@ -1,3 +1,5 @@
+Imported from Creckercodes(my account that I no longer have acsess to, thanks 2fa)
+
 # Arduino-OLED-Animation
 Make gifs play on an OLED display utilizing an Arduino board.
 
