@@ -90,6 +90,8 @@ the folder containing this project. To select a video explicitly:
 .\Arduino-OLED-Animation\Operation.bat "C:\path\to\animation.mp4"
 ```
 
+including the path should only be necessary for if you added multiple video files as running operation.bat should capture the video file automatically or if you plan on only converting for one use case instead of both at the same time.
+
 The batch file runs from its own folder, so it can also be launched from
 another working directory. It stops and reports an error if any conversion
 step fails.
