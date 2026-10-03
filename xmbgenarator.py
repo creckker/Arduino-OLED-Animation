@@ -1,7 +1,22 @@
-from PIL import Image, ImageSequence
+import argparse
 import os
+from pathlib import Path
 
-gif_path = "tumblr_m6gygdxAn31roaheko1_500.gif" # gif path here example one already set
+from PIL import Image, ImageSequence
+
+parser = argparse.ArgumentParser(
+    description="Convert an animated GIF into monochrome XBM frames."
+)
+parser.add_argument(
+    "gif",
+    nargs="?",
+    type=Path,
+    default=Path("tumblr_m6gygdxAn31roaheko1_500.gif"),
+    help="GIF to convert (default: the example GIF name)",
+)
+gif_path = parser.parse_args().gif
+if not gif_path.is_file():
+    parser.error(f"GIF file not found: {gif_path}")
 
 # Get the current workspace directory (where this script is located)
 workspace_dir = os.path.dirname(os.path.abspath(__file__))
